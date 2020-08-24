@@ -1,0 +1,11 @@
+
+    <div class="text-center animate__animated animate__flip" id="square">
+        <div *ngIf="isPlayer; else elseBlock">
+            <img [src]="player1Link" class="img-thumbnail" alt="" id="player1">
+        </div>
+
+        <ng-template #elseBlock>
+            <img [src]="player2Link" class="img-thumbnail" alt="" id="player2">
+        </ng-template>
+        
+    </div>

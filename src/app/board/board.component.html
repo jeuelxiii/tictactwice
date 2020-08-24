@@ -1,0 +1,54 @@
+<div class="container-fluid animate__animated animate__flash" id="main-container">
+
+
+    <div class="container" id="sub-container">
+
+        <div class="text-center" id="player-container">
+            <label for="">
+                <h3>Player 1: </h3>
+            </label>
+            <select class="SelectCar" [(ngModel)]="player1">
+                <option *ngFor="let t of twices" value="{{t}}">
+                    {{t}}
+                </option>
+            </select>
+
+            <br>
+            <label for="">
+                <h3>Player 2: </h3>
+            </label>
+            <select class="SelectCar" [(ngModel)]="player2">
+                <option *ngFor="let t of twices" value="{{t}}">
+                    {{t}}
+                </option>
+            </select>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-7 text-center">
+                <h1>Current Player: {{ player }}</h1>
+                <div class="text-center">
+                    <button class="btn btn-info my-3" (click)="newGame()">Start New Game</button>
+                </div>
+
+                <h2 *ngIf="winner">
+                    Player {{ winner }} won the game!
+                </h2>
+
+                <main>
+                    <app-square *ngFor="let val of squares; let i = index" [value]="val" [player1]="player1"
+                        [player2]="player2" (click)="makeMove(i)">
+                    </app-square>
+                </main>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+</div>

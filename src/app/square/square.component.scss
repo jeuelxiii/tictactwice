@@ -1,0 +1,31 @@
+h1{
+    font-size:4em;
+}
+
+#square{
+    height: 100%;
+    width: 100%;
+    align-content: center;
+    display: grid;
+
+
+}
+
+#twice{
+    height: 198px;
+    width: 198px;
+    z-index: 99999;
+}
+
+.absolute{
+    position: absolute;
+}
+
+#player1{
+    width: 198px;
+    height: 198px;
+}
+
+img{
+    box-shadow: 1px 1px 1px solid black;
+}

@@ -1,0 +1,45 @@
+main{
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    grid-gap: 0px;
+}
+
+app-square{
+    border: 1px gray solid;
+    height: 200px;
+}
+
+label{
+    font-family: cursive;
+}
+
+h1{
+    font-family: cursive;
+    font-weight: 700;
+}
+
+h2{
+    font-family: cursive;
+    font-weight: 600;
+}
+
+.btn{
+    border-radius: 20px;
+    background-color: #fc038c;
+}
+
+#player-container{
+    border: 1px black solid;
+    border-radius: 10px;
+    background-color: #cc419e;
+}
+
+#main-container{
+    background-color: #f277c9;
+}
+
+#sub-container{
+    background-color: white !important;
+    padding: 0;
+}
+
