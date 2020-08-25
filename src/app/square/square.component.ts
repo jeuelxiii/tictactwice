@@ -94,6 +94,10 @@ export class SquareComponent implements OnInit {
       this.isPlayer = false;
     }
 
+    if(this.player1 === '' || this.player2 === ''){
+      this.value = null;
+    }
+
   }
 
 

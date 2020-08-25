@@ -29,3 +29,16 @@ h1{
 img{
     box-shadow: 1px 1px 1px solid black;
 }
+
+
+@media only screen and (max-width: 996px){
+    #player1{
+        width: 100px;
+        height: 100px;
+    }
+
+    #player2{
+        width: 100px;
+        height: 100px;
+    }
+}

@@ -43,3 +43,24 @@ h2{
     padding: 0;
 }
 
+@media only screen and (max-width: 996px){
+    main{
+        display: grid;
+        grid-template-columns: 100px 100px 100px;
+        grid-gap: 0px;
+    }
+    
+    app-square{
+        border: 1px gray solid;
+        height: 100px;
+    }
+
+    h1{
+        font-size: 1.6em;
+
+    }
+    
+    h2{
+        font-size: 1.5em;
+    }
+}

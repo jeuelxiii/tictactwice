@@ -7,7 +7,7 @@
             <label for="">
                 <h3>Player 1: </h3>
             </label>
-            <select class="SelectCar" [(ngModel)]="player1">
+            <select class="selectPlayer" [(ngModel)]="player1">
                 <option *ngFor="let t of twices" value="{{t}}">
                     {{t}}
                 </option>
@@ -17,7 +17,7 @@
             <label for="">
                 <h3>Player 2: </h3>
             </label>
-            <select class="SelectCar" [(ngModel)]="player2">
+            <select class="selectPlayer" [(ngModel)]="player2">
                 <option *ngFor="let t of twices" value="{{t}}">
                     {{t}}
                 </option>
@@ -28,7 +28,7 @@
     <div class="container">
 
         <div class="row d-flex justify-content-center">
-            <div class="col-md-7 text-center">
+            <div class="col-sm-7 text-center">
                 <h1>Current Player: {{ player }}</h1>
                 <div class="text-center">
                     <button class="btn btn-info my-3" (click)="newGame()">Start New Game</button>
