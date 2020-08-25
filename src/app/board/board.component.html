@@ -40,7 +40,7 @@
 
                 <main>
                     <app-square *ngFor="let val of squares; let i = index" [value]="val" [player1]="player1"
-                        [player2]="player2" (click)="makeMove(i)">
+                        [player2]="player2" [winner]="winner" (click)="makeMove(i)" [squares]="squares">
                     </app-square>
                 </main>
             </div>

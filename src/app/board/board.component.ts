@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnChanges, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-board',
   templateUrl: './board.component.html',
   styleUrls: ['./board.component.scss']
 })
-export class BoardComponent implements OnInit {
+export class BoardComponent implements OnInit, OnChanges {
   squares: any[];
   xIsNext: boolean;
   winner: string;
@@ -26,7 +26,6 @@ export class BoardComponent implements OnInit {
   ngOnInit(): void {
     this.newGame();
     
-
   }
 
   newGame(){
@@ -38,7 +37,7 @@ export class BoardComponent implements OnInit {
   }
 
   get player(){
-    return this.xIsNext ? 'X' : 'O';
+    return this.xIsNext ? '1' : '2';
   }
 
   makeMove(idx: number){
@@ -81,6 +80,23 @@ export class BoardComponent implements OnInit {
     return null;
   }
 
+  ngOnChanges(changes: SimpleChanges){
+    let change = changes['winner'];
+    console.log(change)
+    if(change.firstChange != change.currentValue){
+      this.endGame();
+    }
+   }
+    
 
+  endGame(){
+    if(this.winner == '1'){
+      alert('Player 1 Wins!');
+      this.newGame();
+    } else if(this.winner == '2'){
+      alert('Player 2 Wins!');
+      this.newGame();
+    }
+  }
 
 }

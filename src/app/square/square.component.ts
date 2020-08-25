@@ -6,9 +6,11 @@ import { Component, AfterViewChecked, Input, OnInit } from '@angular/core';
   styleUrls: ['./square.component.scss']
 })
 export class SquareComponent implements OnInit {
-  @Input() value: 'X' | 'O';
+  @Input() value: '1' | '2';
   @Input() player1: string;
   @Input() player2: string;
+  @Input() winner: string;
+  @Input() squares = [];
 
   isPlayer: boolean;
 
@@ -88,9 +90,9 @@ export class SquareComponent implements OnInit {
         this.player2Link = "../../assets/twice-logo.jpg";
     }
 
-    if (this.value == 'X') {
+    if (this.value == '1') {
       this.isPlayer = true;
-    } else if (this.value == 'O') {
+    } else if (this.value == '2') {
       this.isPlayer = false;
     }
 
@@ -98,13 +100,29 @@ export class SquareComponent implements OnInit {
       this.value = null;
     }
 
+
+
+    this.endGame();
+  }
+
+  endGame(){
+    if(this.winner == '1'){
+      alert('Player 1 Wins!');
+
+    } else if(this.winner == '2'){
+      alert('Player 2 Wins!');
+    }
+
+    if(this.squares.length = 9){
+      if(!this.squares.includes(null)){
+        alert('Draw!');
+      }
+      }
+    
+
   }
 
 
-  clickedLog() {
-    console.log(this.player1);
-    console.log(this.player2);
-  }
 
 
 
